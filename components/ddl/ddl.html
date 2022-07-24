@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ddl.css">
+    <script src="https://kit.fontawesome.com/a6d27a9f7c.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Double Linked List</title>
+</head>
+<body>
+ <main>
+        <header id="header" >
+            <div class="container d-flex align-items-center justify-content-between">
+        
+              <h1 class="logo"><strong>Double Linked List</strong></h1>
+        
+              <nav id="navbar" class="navbar">
+                
+                <ul>
+                  <li><button type="button" class="getstarted scrollto" data-bs-toggle="modal" data-bs-target="#stack-model">E-Learn</button></li>
+                </ul>
+                
+  
+              </nav><!-- .navbar -->
+        
+            </div>
+          </header><!-- End Header -->
+    <section>
+        <div class="container-fluid" style="height: 62vh;" >
+            <div class="box_container" before-text="Head">
+              <div class="null-node"> <strong>Null</strong></div>
+              <div class="box">
+              
+                <div class="box-item" ></div>
+                
+              </div>
+              <div class="null-node"> <strong>Null</strong></div>
+              <div class="info" style="color: #16507b">Doubly linked list</div>
+              </div>
+              
+        </div>
+        
+        <div class="operations" style="box-shadow: 0 0 29px 0 rgba(178, 179, 180, 0.61);
+        transition: all 0.3s ease-in-out; color: white; padding: 15px;">
+            <div class="input-container" >
+                <div class="btn-group">
+
+                  <input id="prependInput" type="text" style="width:20%;height:4%; margin: 0 5px;"class="form-control" placeholder="Enter Value"/>
+                      <div id="prependBtn" style="width:20%;height:4%; margin: 0 5px;" class="btn btn-primary">Prepend</div>
+
+                    <input id="pushInput" type="text" style="width:20%;height:4%; margin: 0 5px;"class="form-control" placeholder="Enter Value"/>
+                      <div id="pushBtn" style="width:20%;height:4%; margin: 0 5px;" class="btn btn-primary">Push</div>
+                      
+                      <input id="insertAtInput" type="text" style="width:20%;height:4%; margin: 0 5px;" class="form-control" placeholder="Value"/>
+                      <input id="posInput" type="text"   style="width:20%;height:4%; margin: 0 5px;" class="form-control" placeholder="Index"/>
+                      <div id="insertAtBtn" style="width:20%;height:4%; margin: 0 5px;" class="btn btn-primary" >InsertAt Index</div>
+                      </div>
+                      <br>
+                      <div class="btn-group">
+                      <input id="searchInput" type="text" style="width:20%;height:4%; margin: 0 5px;"  class="form-control" placeholder="Search"/>
+                      <div id="searchBtn"  style="width:20%;height:4%; margin: 0 5px;"class="btn btn-primary" >Search</div>
+                      
+                      <input id="removeInput" type="text" style="width:20%;height:4%; margin: 0 5px;"  class="form-control" placeholder="Index"/>
+                      <div id="removeBtn" style="width:20%;height:4%; margin: 0 5px;" class="btn btn-primary" >RemoveAt Index</div>
+
+                      
+                      <div id="clearBtn"  style="width:20%;height:4%; margin: 0 5px;"class="btn btn-warning" >Clear List</div>
+                    </div>
+                    </div>
+        </div>
+    </section>
+
+  </main>
+
+    <div class="modal fade" id="stack-model" tabindex="-1" aria-labelledby="model-label" aria-hidden="true" >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="model-label">DOUBLY LINKED LIST</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <div class="modal-body">
+            
+            <div id="test" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+              <div class="carousel-inner">
+                
+                <div class="carousel-item active" id="item">
+                  <p>Doubly linked list is a complex type of linked list in which a node contains a pointer to the previous as well as the next node in the sequence.</p>
+                  <p>a node consists of three parts: node data, pointer to the next node in sequence (next pointer) , pointer to the previous node (previous pointer).<br>
+                    The last node of the list contains pointer to the null.</p>
+                     <img  style="   width:420px;
+                     height:200px;"src="../images/ddl1.png" alt="">
+                </div>
+                
+                <div class="carousel-item" id="item2">
+                     <h5>Basic Operations of Linked List</h5>
+                    <ul>
+                      <li>Insertion at begining : Adds an element at the beginning of the list.</li>
+                      <li>Insertion at end : Adds an element at the end of the list.</li>
+                        <li>Deletion at begining : Deletes an element at the beginning of the list.</li>
+                        <li>Deletion at end : Deletes an element at the end of the list.</li>
+                        <li>Display : Displays the complete list.</li>
+                        <li>Search : Searches an element using the given key.</li>
+                        <li>Delete : Deletes an element using the given key  or a given index.</li>
+                    </ul>
+                </div>
+                <div class="carousel-item" id="item2">
+                 
+                    <h5>Node Creation</h5>
+                    <p><pre>
+                        struct node {
+                            int data;
+                            struct node *next;
+                            struct node *prev;
+                        }
+                      struct node *head, *tail, *ptr;   
+                      ptr = (struct node *)malloc(sizeof(struct node *));  </pre></p>
+                    
+                </div>
+                <div class="carousel-item" id="item2">
+                  <h5>Inserting a node at the beginning of the linked list</h5>
+                  <p>
+                    <pre>
+                      1. Create a new node.
+                      2. Set prev and next pointers of new node
+                      3. Make new node as head node.
+                    </pre>
+                  </p>
+                  <img class="img1" src="../images/ddl2.png" alt="">
+                </div>
+    
+                <div class="carousel-item" id="item2">
+                  <h5>Inserting a node at the end of the linked list</h5>
+                  <p>
+                    <pre>
+        1. Create a new node
+        2. If the list is empty,make the new node as point head and tail to it.
+        3. If the head node is not null,(list already has some elements),
+            take the tail node.Make the last node => next as the new node.
+            And point the Tail pointer to the last node.
+                    </pre>
+                  </p>
+                  <img class="img1" src="../images/ddl3.png" alt="">
+                </div>
+    
+                <div class="carousel-item" id="item2">
+                    <h5>Searching a node in Doubly linked list</h5>
+                    <p><pre>
+                      1. Iterate the linked list using a loop.
+                      2. If any node has the given key value, return 1.
+                      3. If the program execution comes out of the loop
+                      (the given key is not present in the linked list), return -1.
+                    </pre></p>
+                    <p><pre>
+                      int searchNode(struct node *head, int key)
+                      {
+                          struct node *temp = head;
+                          while(temp != NULL)
+                          {
+                              if(temp->data == key)
+                                  return 1;
+                              temp = temp->next;
+                          }
+                      }
+                    </pre></p>
+                  </div>
+    
+                  <div class="carousel-item" id="item2">
+                    <h5>Deleting a node in Doubly linked list</h5>
+                    <p>
+                      <pre>
+      1. If the head node has the given key,
+        make the head node points to the second node and free its memory.
+      2. loop until the element to be deleted is found and then change the previous
+        an the next pointers of the previous element and point to the next element. 
+        Ptr = head;  
+        head = head → next;   
+        head → prev = NULL   and free the memory.
+        else, update the current node to the next and do the
+        above process (from step 2) till the last node.
+                      </pre>
+                    </p>
+                    <img class="img1" src="../images/ddl5.png" alt="">
+                  </div>
+    
+                <div class="carousel-item" id="item2">
+                  <h5>Applications</h5>
+                  <p><pre>
+        1.Image viewer Previous and next images are linked, hence can be 
+            accessed by next and previous button.
+        2.Previous and next page in web browser  We can access previous and next url 
+            searched in web browser by pressing back and next button are linked
+            as linked list.
+        3.Music Player  Songs in music player are linked to previous and next song.
+                  </pre></p>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#test" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden" >Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#test" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden" >Next</span>
+                </button>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <script src="ddl.js" type="text/javascript"></script>
+</body>
+</html>

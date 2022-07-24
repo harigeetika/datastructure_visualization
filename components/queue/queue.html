@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="queue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Queue</title>
+    
+</head>
+<body>
+
+        <section id="hero">
+            <header id="header" >
+                <div class="container d-flex align-items-center justify-content-between">
+            
+                  <h1 class="logo"><strong>Queue</strong></h1>
+                  <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><button type="button" class="getstarted scrollto" data-bs-toggle="modal" data-bs-target="#stack-model">E-Learn</button></li>
+                      </ul>
+                    
+                  </nav><!-- .navbar -->
+            
+                </div>
+              </header><!-- End Header -->
+            
+              <!--container-->
+              <div class="container-fluid">
+              <div class="column">
+                    <div class="inputs">
+                        <h4>Queue Operations</h4>
+                        <label>Insert</label>
+                        <input id="myInput" type="text">
+                        <button id="add-item-btn" class="btn btn-primary">Add Item</button>
+                        <button id="rand-item-btn" class="btn btn-success">Random Item</button>
+                        <button id="remove-item-btn" class="btn btn-danger">Remove Item</button>
+                        <button id="clear-item-btn" class="btn btn-secondary">Clear Queue</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="example">
+                        <p id="stack_head" style="font-size: 30px;">QUEUE</p>
+                        <div class="box-conatiner">
+                            <div class="stack">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </section>
+
+          <div class="modal fade" id="stack-model" tabindex="-1" aria-labelledby="model-label" aria-hidden="true" >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  <h5 class="modal-title" id="model-label">QUEUE</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                  
+                  <div id="test" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+                    <div class="carousel-inner">
+                      
+                      <div class="carousel-item active" id="item">
+                        <p>A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO).It contains 2 pointer front and rear pointing to first and last element.
+                          All the Insertions are done at Rear and Deletions at Front.
+                        </p>
+                           <img  style="   width:420px;
+                           height:250px;"src="../images/queue1.png" alt="">
+                      </div>
+                      
+                      <div class="carousel-item" id="item2">
+                           <h5>Basic Operations of Queue</h5>
+                          <ul>
+                            <li>Enqueue(): add (store) an item to the queue.</li>
+                              <li>dequeue(): remove (access) an item from the queue.</li>
+                              <li>peek(): Gets the element at the front of the queue without removing it.</li>
+                              <li>isfull(): Checks if the queue is full.</li>
+                              <li>isempty():  Checks if the queue is empty</li>
+                          </ul>
+                          <p>In queue, we always DEQUEUE  data, pointed by FRONT pointer and while ENQUEING data in the queue we use of REAR pointer.</p>
+                          <img class="img1" src="../images/queue2.png" alt="">
+                      </div>
+                      
+                      <div class="carousel-item" id="item">
+                        <h3>EnQueue</h3>
+                        <img class="img" src="../images/queue4.jpg" alt="">
+                      </div>
+          
+                      <div class="carousel-item" id="item">
+                          <h3>DeQueue</h3>
+                          <img class="img" src="../images/queue3.jpg" alt="">
+                        </div>
+          
+                      <div class="carousel-item" id="item2">
+                        <h3>Applications</h3>
+                        <ul>
+                          <li>Queues are widely used as waiting lists for a single shared resource like printer, disk, CPU.</li>
+                          <li>Queues are used in asynchronous transfer of data (where data is not being transferred at the same rate between two processes) for eg. pipes, file IO, sockets.</li>
+                          <li>Queues are used as buffers in most of the applications like MP3 media player, CD player, etc.</li>
+                          <li>Queue are used to maintain the play list in media players in order to add and remove the songs from the play-list.</li>
+                          <li>Queues are used in operating systems for handling interrupts.</li>
+                        </ul>
+                      </div>
+                    
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#test" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" >Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#test" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden" >Next</span>
+                      </button>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+  
+    <script src="queue.js" type="text/javascript"></script>
+</body>
+</html>

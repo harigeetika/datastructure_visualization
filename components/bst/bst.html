@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Search Tree</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="bst.css" />
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+</head>
+
+
+
+  <body onload="draw()" onresize="draw()">   
+    <header id="header">
+      <div class="container d-flex align-items-center justify-content-between">
+  
+        <h1 class="logo"><strong>Binary Search Tree</strong></h1>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#stack-model">E-Learn</button>
+          </ul>
+       
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+    
+    <div style=" text-align: right; height:63vh;">
+    <h5 style="text-align:center; font: bold">Binary Search Tree</h5>
+      <canvas id="canvas" width="200" height="500"></canvas>
+    </div>
+    
+    
+    <div class="info">Binary Search Tree</div>
+    <div class="operations" style="box-shadow: 0 0 29px 0 rgba(178, 179, 180, 0.61);
+    transition: all 0.3s ease-in-out; color: white; padding: 6px;">
+        <div class="input-container" >
+            <div class="btn-group">
+                <input id="myInput" type="text" style="width:20%;height:3%; margin: 0 5px;"class="form-control" placeholder="Enter key" />
+                  <div id="pushBtn" style="width:20%; margin: 0 5px;" class="btn btn-primary" onclick="insert()">Insert</div>
+                
+                  <input id="searchInput" type="text" style="width:20%;height:4%; margin: 0 5px;"  class="form-control" placeholder="Search"/>
+                  <div id="searchBtn"  style="width:20%; margin: 0 5px;"class="btn btn-primary" onclick="search()" >Search</div>
+                  
+                  <input id="removeInput" type="text" style="width:20%;height:4%; margin: 0 5px;"  class="form-control" placeholder="Enter Value"/>
+                  <div id="removeBtn" style="width:20%; margin: 0 5px;" class="btn btn-primary" onclick="remove1()" >Remove</div>
+
+    
+                  <div id="clearBtn"  style="width:20%; margin: 0 5px;"class="btn btn-primary" onclick="clearr()" >Clear</div>
+                </div>
+                <div class="btn-group">
+                    <div id="inorderBtn"  style="height:4%; margin: 0 5px;"class="btn btn-primary" onclick="inorder()" >Inorder</div>
+                    <div id="preorderBtn"  style="height:4%; margin: 0 5px;"class="btn btn-primary" onclick="preorder()" >PreOrder</div>
+                    <div id="postorderBtn"  style="height:4%; margin: 0 5px;"class="btn btn-primary" onclick="postorder()" >PostOrder</div>
+                </div>
+                </div>
+    </div>
+
+    <div class="modal fade" id="stack-model" tabindex="-1" aria-labelledby="model-label" aria-hidden="true" >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="model-label">Binary Search Tree</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div> 
+          
+          <div class="modal-body">
+            
+            <div id="test" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+              <div class="carousel-inner">
+                
+                <div class="carousel-item active" id="item2">
+                    <h5>Binary Tree</h5>
+                    <p>Tree represents the nodes connected by edges. 
+                        A binary tree has a condition that each node can have a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.</p>
+                        <img  src="../images/bst2.jpg" alt="">          
+                </div>
+    
+                <div class="carousel-item" id="item2">
+                    <p>Binary search tree is a Binary tree that quickly allows us to maintain a sorted list of numbers.
+    
+                    <li>It is called a binary tree because each tree node has a maximum of two children.</li>
+                    <li>It is called a search tree because it can be used to search for the presence of a number in O(log(n)) time.</li>
+                    
+                    The properties that separate a binary search tree from a regular binary tree is
+                    
+                    <li>All nodes of left subtree are less than the root node</li>
+                    <li>All nodes of right subtree are more than the root node</li>
+                    <li>Both subtrees of each node are also BSTs i.e. they have the above two properties.</li></p>
+                   <img   style="margin-left: 25%;" src="../images/bst1.png" alt=""> 
+                </div>
+                
+                <div class="carousel-item" id="item2">
+                     <h3>Basic Operations of Binary search Tree</h3>
+    
+                    <ul>
+                      <li>Insert: Add an element to the tree</li>
+                      <li>Delete: Remove an element from the tree</li>
+                      <li>Search: Search an element in the tree</li>
+                      <li>Inorder traversal</li>
+                      <li>Preorder traversal</li>
+                      <li>PostOrder traversal</li>
+                    </ul>
+    
+                </div>
+    
+                <div class="carousel-item" id="item2">
+                    <h3>Binary Tree Representation</h3>
+                    <p><pre>
+                        struct node
+                        {
+                            int data;
+                            struct node *left;
+                            struct node *right;
+                        };
+                    </pre></p>
+                    <img  style="margin-left:25%; width:300px ; height: 200px;" src ="../images/bst3.PNG">
+                    </div>
+                
+                <div class="carousel-item" id="item2">
+                    <h3>Search</h3>
+                    <p>If the value is below the root, we can say for sure that the value is not in the right subtree; we need to only search in the left subtree and if the value is above the root, we can say for sure that the value is not in the left subtree; we need to only search in the right subtree.</p>
+                    <p>If the value is not found, we eventually reach the left or right child of a leaf node which is NULL and it gets propagated and returned..</p>
+                    <p><pre>
+                If root == NULL 
+                    return NULL;
+                If number == root->data 
+                    return root->data;
+                If number < root->data 
+                    return search(root->left)
+                If number > root->data 
+                    return search(root->right)
+                    </pre></p>
+                  </div>
+    
+                <div class="carousel-item" id="item2">
+                  <h5>Insert</h5>
+                  <p>Inserting a value in the correct position is similar to searching because we try to maintain the rule that the left subtree is lesser than root and the right subtree is larger than root.</p>
+                  <p>We keep going to either right subtree or left subtree depending on the value and when we reach a point left or right subtree is null, we put the new node there.</p>
+                  <img  class="img1"src="../images/bst7.png">
+                </div>
+                <div class="carousel-item" id="item2">
+                    <h5>Algorithm</h5>
+                    <p><pre>
+                        If node == NULL 
+                            return createNode(data)
+                        if (data < node->data)
+                            node->left  = insert(node->left, data);
+                        else if (data > node->data)
+                            node->right = insert(node->right, data);  
+                        return node;
+                              </pre></p>
+                    </div>
+    
+                <div class="carousel-item" id="item2">
+                    <h3>Deletion</h3>
+                    <p>There are three situations of deleting a node from binary search tree.</p>
+                    <p>The node to be deleted is a leaf node</p>
+                    <p>In the first case, the node to be deleted is the leaf node. In such a case, simply delete the node from the tree.</p>
+                    <img  class="img" src="../images/bst4.png">
+                  </div>
+                  <div class="carousel-item" id="item2">
+                    <h3>Deletion</h3>
+                    <p>The node to be deleted has only one child.</p>
+                    <p><pre>
+                    1.Replace that node with its child node.
+                    2.Remove the child node from its original position.
+    
+                    </pre></p>
+                    <img  class="img" src="../images/bst5.png">
+                  </div>
+                  <div class="carousel-item" id="item2">
+                    <h3>Deletion</h3>
+                    <p>The node to be deleted has two children.</p>
+                    <p><pre>
+                1.Get the inorder successor of that node.
+                2.Replace the node with the inorder successor.
+                3.Remove the inorder successor from its original position.
+                    </pre></p>
+                    <img  class="img" src="../images/bst6.png">
+                  </div>
+                  
+    
+    
+                <div class="carousel-item" id="item2">
+                  <h3>Applications</h3>
+                  <ul>
+                    <li>A Self-Balancing Binary Search Tree is used to maintain sorted stream of data. For example, suppose we are getting online orders placed and we want to maintain the live data (in RAM) in sorted order of prices. </li>
+                    <li>A Self-Balancing Binary Search Tree is used to implement doubly ended priority queue.</li>
+                    <li>There are many more algorithm problems where a Self-Balancing BST is the best suited data structure, like count smaller elements on right, Smallest Greater Element on Right Side, etc.</li>
+                   
+                  </ul>
+                </div>
+              
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#test" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden" >Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#test" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden" >Next</span>
+                </button>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+    <script src="BST.js" type="text/javascript"></script>
+  </body>
+</html>

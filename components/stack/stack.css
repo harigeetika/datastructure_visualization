@@ -1,0 +1,188 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+  }
+  
+  a {
+    color: #2487ce;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #469fdf;
+    text-decoration: none;
+  }
+  /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  background: #fff;
+  z-index: 997;
+  padding: 5px 0;
+  border-bottom: 1px solid #e6f2fb;
+  box-shadow: 0 0 29px 0 rgba(178, 179, 180, 0.61);
+  transition: all 0.3s ease-in-out;
+}
+#header.header-scrolled {
+  border-color: #fff;
+  box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+}
+#header .logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #124265;
+  font-family: "Poppins", sans-serif;
+}
+#header .logo a {
+  color: #16507b;
+}
+#header .logo img {
+  max-height: 40px;
+}
+@media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+}
+
+.navbar {
+    padding: 0;
+  }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  .navbar li {
+    position: relative;
+  }
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 14px;
+    color: #16507b;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar .getstarted, .navbar .getstarted:focus {
+    background: #2487ce;
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+    color: #fff;
+    background: #3194db;
+  }
+
+  .carousel #item {
+    padding: 0 50px;
+    
+    text-align: center;
+  }
+  .carousel #item2{
+  padding: 0 50px;
+  }
+  .carousel .carousel-item .img{
+     width:500px;
+     height:270px;
+  }
+ 
+
+/*--------container---------*/
+.container-fluid {
+    background-color: silver;
+}
+.column {
+    float: left;
+    margin: 5px;
+}
+
+.btn{
+    margin: 5% 3% 5% 0%;
+}
+.inputs{
+    width:350px;
+    box-shadow: 0 0 29px 0 rgba(140, 190, 240, 0.61);
+  transition: all 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 10px;
+}
+.inputs label{
+    font-size: 20px;
+}
+.example{
+    width: 700px;
+    border-radius: 15px;
+    background-color: lightgrey;
+}
+.example #stack_head{
+    text-align: center;
+    margin-bottom: 0;
+}
+.example .stack {
+    max-width: 250px;
+    overflow: auto;
+}
+    
+.example .stack-conatiner{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 487px;
+    max-width: 250px;
+    border: 1px solid black;
+    background-color:whitesmoke;
+    position: relative;
+    margin :0 auto;
+}
+    
+.example .stack .stack_item{
+    background-color: whitesmoke;
+    border:1px solid black;
+    padding: 5px;
+    width:100%;
+    text-align: center;
+    transition: all 0.4s ease;
+
+}
+.example .stack-conatiner .stack .stack_item::before{
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  }
+  .example .stack-conatiner .stack .stack_item:first-child::before{
+    content: 'Top';
+    position: absolute;
+    left: -50px;
+    font-weight: bold;
+    color: #124265;
+  }
+
+.example .stack .stack_item.peeking {
+    background-color: black;
+    color:white;
+
+}
+
+/* queue css*/
+.example .box-conatiner{
+    justify-content: flex-start;
+    height: 510px;
+    max-width: 250px;
+    border: 1px solid black;
+    background-color:whitesmoke;
+    margin :0 auto;
+
+}

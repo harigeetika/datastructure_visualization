@@ -1,0 +1,137 @@
+body{
+    background-image: url("hero-bg.jpg");
+    font-family: 'Poppins';
+    color: #124265;
+  }
+  #header {
+  transition: all 0.5s;
+  background: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid #e6f2fb;
+  box-shadow: 0 0 29px 0 rgba(58, 62, 66, 0.61);
+  transition: all 0.3s ease-in-out;
+  }
+  
+  #header .logo {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  color: #124265;
+  font-family: "Poppins", sans-serif;
+  }
+  #header .logo a {
+  color: #16507b;
+  }
+  
+  @media (max-width: 992px) {
+  #header .logo {
+    font-size: 28px;
+  }
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  .navbar {
+  padding: 0;
+  }
+  .navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  }
+  .navbar li {
+  position: relative;
+  }
+  .navbar a, .navbar a:focus {
+  
+  color: #16507b;
+  transition: 0.3s;
+  }
+  .navbar .getstarted, .navbar .getstarted:focus {
+    background: #2487ce;
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+    color: #fff;
+    background: #3194db;
+  }
+
+h3{
+  text-align: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #124265;
+}
+
+
+
+ #hero .icon-boxes{
+    margin: 5px 50px;
+ }
+  #hero .icon-box {
+    padding: 50px 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 29px 0 rgba(125, 129, 133, 0.61);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    margin: 5px;
+    z-index: 1;
+  }
+  #hero .icon-box .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+  }
+  #hero .icon-box .title a {
+    color: #124265;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  #hero .icon-box .img {
+   width:210px;
+   height: 170px;
+  }
+
+  #hero .icon-box:hover {
+    transform: scale(1.08);
+  }
+  #hero .icon-box:hover .title a {
+    color: #2487ce;
+  }
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  @media (max-height: 800px) {
+    #hero {
+      height: auto;
+    }
+  }
+  @media (max-width: 992px) {
+    #hero {
+      height: auto;
+    }
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
